@@ -19,3 +19,7 @@
 1. [Workshop: Angular](workshop-angular/README.md)
 2. [Workshop: Ember](workshop-ember/README.md)
 3. [Workshop: Node](workshop-node/README.md)
+
+## Contributing
+
+Changes and suggestions are welcome! Please [fork the repo](https://help.github.com/articles/fork-a-repo/) and send us Pull Requests with your ideas instead of pushing directly to the central repo.  Also, please keep changes to multiple talks/workshops in separate Pull Requests, unless the changes are fixing typos or things of that nature.
