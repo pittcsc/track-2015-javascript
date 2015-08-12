@@ -2,6 +2,12 @@
 
 ## Outline
 
+### The DOM
+- HTML
+- HTML tags
+- CSS
+- CSS selectors
+
 ### DOM interaction
 - The window object
 - The document object
