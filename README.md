@@ -20,6 +20,27 @@
 2. [Workshop: Ember](workshop-ember/README.md)
 3. [Workshop: Node](workshop-node/README.md)
 
+## Running a Slideshow
+
+1. Clone the repo
+
+    ```bash
+    $ git clone git@github.com:Pitt-CSC/track-2015-javascript.git
+    $ cd track-2015-javascript
+    ```
+
+2. Install [`reveal-md`](https://github.com/webpro/reveal-md)
+
+    ```bash
+    $ npm install
+    ```
+
+3. You can access the `reveal-md` executable using `npm start`.  Run it with the path to the slides to see them in your browser!
+
+    ```bash
+    $ npm start talk-1-beginner-js-1/slides.md
+    ```
+
 ## Contributing
 
 Changes and suggestions are welcome! Please [fork the repo](https://help.github.com/articles/fork-a-repo/) and send us Pull Requests with your ideas instead of pushing directly to the central repo.  Also, please keep changes to multiple talks/workshops in separate Pull Requests, unless the changes are fixing typos or things of that nature.
