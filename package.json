@@ -1,0 +1,14 @@
+{
+  "name": "track-2015-javascript",
+  "description": "Slides for the 2015 JavaScript Track",
+  "scripts": {
+    "start": "node_modules/reveal-md/bin/server-cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pitt-csc/track-2015-javascript.git"
+  },
+  "dependencies": {
+    "reveal-md": "0.0.19"
+  }
+}
