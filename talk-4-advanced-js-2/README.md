@@ -17,6 +17,7 @@
 
 ### Closures
 - 
+- It is possible to emulate private elements with closures.
 
 ### Design Patterns
 - Pub/Sub, or observer pattern
