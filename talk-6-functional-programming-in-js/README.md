@@ -21,6 +21,9 @@
 - The inner function is called a closure.
 - `.map()` and `.reduce()`
 
+### Currying
+-
+
 ### Functional Programming in other languages
 - Scala and Haskell are heralded as true functional languages.
 - ClojureScript is a compile-to-JavaScript implementation of the functional language, Clojure.
