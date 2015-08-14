@@ -15,6 +15,10 @@
 
 ### Functional programming concepts: Immutability
 - Creating a new object with `Object.assign({}, ...)` or copying arrays with `[].concat()`, rather than mutating the original object. 
+
+### Higher Order functions and Closures
+- Any function that utilizes another function is called a higher-order function.
+- The inner function is called a closure.
 - `.map()` and `.reduce()`
 
 ### Functional Programming in other languages
