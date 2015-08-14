@@ -15,6 +15,7 @@
 
 ### Functional programming concepts: Immutability
 - Creating a new object with `Object.assign({}, ...)` or copying arrays with `[].concat()`, rather than mutating the original object. 
+- `.map()` and `.reduce()`
 
 ### Functional Programming in other languages
 - Scala and Haskell are heralded as true functional languages.
