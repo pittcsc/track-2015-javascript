@@ -14,7 +14,7 @@
 - Still, it's not a perfect vehicle for functional Programming. And it doesn't need to be: we can benefit from the broad strokes of functional programming while maintaining the exporessiveness of JavaScript.
 
 ### Functional programming concepts: Immutability
-- Creating a new object with `Object.assign({}, ...)` or copying arrays, rather than mutating the original object. 
+- Creating a new object with `Object.assign({}, ...)` or copying arrays with `[].concat()`, rather than mutating the original object. 
 
 ### Functional Programming in other languages
 - Scala and Haskell are heralded as true functional languages.
