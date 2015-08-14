@@ -22,6 +22,7 @@ objA === objAref; //true
 - JavaScript has two comparative operators for testing equality. `==` first attempts type conversion before comparison, while `===` maintains the current type.
 - For example: `false == 0; //true`
 - Clearly, `==` can lead to unintended consequences, so the rule of thumb is to use `===` in most cases.
+- Likewise for `!=` and `!==`
 
 ### Prototypal Inheritance
 -
