@@ -6,7 +6,7 @@
 - Because JavaScript is dynmically typed, type is not always clear. It's good practice to test critical variable types that could stray from their intended type, for example, incoming parameters.
 - As discussed in our beginniners talk, JavaScript has a very small primitive type system: Boolean, Number, String, null, and undefined.
 - All other structures (arrays, function, objects, Dates) are considered objects. So, for example: `typeof(['I', 'am', 'array']); //object`
-- Primitive types are compared by value-checking, whereas object types are compared by reference. So if we have `var a = 1;` and `var b = 2;`, `a === b; //true`. However, if we have `var objA = { x: 1 };` and `var objB = { x:1 };`, `objA === objB; //false` because, although both objects have equal values, their references are the same.
+- Primitive types are compared by value-checking, whereas object types are compared by reference. So if we have `var a = 1;` and `var b = 1;`, `a === b; //true`. However, if we have `var objA = { x: 1 };` and `var objB = { x:1 };`, `objA === objB; //false` because, although both objects have equal values, their references are the same.
 - Say you and your neighbor have the same kind of car: same make, model, and color. Still, the cars are separate, and you presumably only drive your specific car. If there was ever any confusion, the license plate should be unique. JavaScript also have a unique license plate, an reference, assigned to every object. This is what is compared with comparative operators and assigned during assignment.
 - For example, in this case both objects are considered exactly the same:
 ```
