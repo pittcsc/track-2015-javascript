@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h1= title
+    p Register or 
+        a(href='/login') log in
+    form(role='form', action="/register",method="post")
+        label(for='usename') Username:
+        input(type="text", name="username", placeholder='username', id='username')
+        label(for='password') Password:
+        input(type="password", name="password", id='password', placeholder='password')
+        label(for='repeat-password') Repeat Password
+        input(type="password", name="password-repeat", id='repeat-password', placeholder='repeat password')
+        input(type="submit", value="Register")
