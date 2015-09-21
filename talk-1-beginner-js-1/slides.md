@@ -5,6 +5,24 @@
 ## Intro to the 2015 JavaScript track
 
 ---
+
+## Who am I?
+
+### JJ Naughton
+- Full-stack web developer
+- Software Engineer Intern at PayPal (Node)
+- @vonbearshark
+- Contact me with any questions. Or check out the #javascript-track channel on Slack.
+
+Note: I interned at PayPal, which is converting to near-100% JavaScript; likewise, I've been working with JS for years now. Anyone else who feels like they could get up here and do this, come see me or Nicole after. We have already had a few club members come forward to help with talks, and they will be coming up. It really doesn't take much authority; we will make sure you're able to present.
+
+----
+
+- The kind of incisive commentary you can expect:
+![Tweet Screenshot](/tweetscreen.png?raw=true "JavaScript lol")
+
+---
+
 ### Structure
 - Weekly presentations on the JavaScript language every meeting, with practical application workshops later in the year.
 - We hope to appeal to varying experience-levels.
@@ -106,7 +124,7 @@ Note: JS is mostly faster and more scalable than, say, Python or Ruby. JS allows
 - Frontend frameworks like [AngularJS](https://angularjs.org/), [Backbone.js](http://backbonejs.org/), and [Ember](http://emberjs.com/)
 - This presentation! (via [Reveal.js](http://lab.hakim.se/reveal-js/#/))
 
-Note: New (and sometimes bizarre) implementations are released every day.
+Note: And Chrome extensions!
 
 ----
 
@@ -128,6 +146,12 @@ Note: For Chrome, you can open up your browser with ctrl + shift + j, with Firef
 ---
 
 ## JavaScript syntax and basics
+- JavaScript is a dynamically typed language, meaning you don't need to specifiy type on definition.
+- In fact, there is only one variable type: `var`
+- Likewise, variables may be assigned to multiple different types.
+- Still, there is an underlying type and type-coercion system.
+
+Note: So, again, there are no explicit types in JavaScript, only implicit ones. This can lead to a lot of confusion, so we are going to spend this presentation going over this. It can be boring, but it is the foundation of the talks to follow.
 
 ---
 
@@ -179,52 +203,127 @@ Note: For Chrome, you can open up your browser with ctrl + shift + j, with Firef
 - Full disclosure: Nearly everything is an object in JavaScript
 - An object in JavaScript is simply a hashmap with key-value pairs. A key is always a string, and a value can be any of the aforementioned types.
 - Objects can be defined in a number of different ways:
-  - 
+    - Object literal: `var obj = {key: 'value'};`
+    - The `new` keyword: `new Object(parameters);`
 
 ----
 
-- Object key-value pairs can be access with both dot and bracket notation. So:
-    -
-- We'll visit objects more in-depth later when we go over Prototypal inheritence.
-
-----
-
+- Object key-value pairs can be access with both dot and bracket notation. Ex: `Foo.bar` and `Foo[bar]`
 - By default JavaScript does comparisons by reference. In order to properly deeply evaluate two objects, use some deep comparison.
 - A quick hack is to use `JSON.stringify()` to coerce the objects into strings and compare that way. This does not accomodate ordering or coerced values (i.e. `null` and `undefined` will not be equal).
+- We'll visit objects more in-depth later when we go over prototypal inheritence.
+- JSON: JavaScript Object Notation; used for web communication.
 
 ---
 
 ### JavaScript syntax and basics: Object Types: Functions
--
+- A function definition:
+```
+    function myFunctionName(parameters) {
+        console.log(parameters); //body
+        return parameters; //optional
+    }
+```
+- Primitives parameters are passed by value, but object types are passed by references.
+- This mean that primitive values will not be altered outside of the function scope, while passed object types will.
+
+----
+
+### Functions as objects
+- Because Functions are Objects in JavaScript, Functions can have inner properties and functions
+- We'll visit those when we review Closures and prototypal inheritence
+
+----
+
+### Annonymous Functions
+- Annonymous functions can be assigned to variables. For example:
+```
+var myFunct = function (param1) {
+    console.log(param1);
+};
+```
+- You can then call this function with `myFunct('Ive been summoned'); //'Ive been summoned'`
+- Wrapping an annonymous function in parenthesis calls the function immediately. So:
+```
+(function() {
+    console.log('Ill be called asap');
+})
+```
+- Annonymous functions can also be passed as parameters themselves. These are called first-call functions, and are useful to asynchronous callbacks and map/reduce functions, but we will talk about that in another presentation.
 
 ---
 
 ### JavaScript syntax and basics: Object Types: Arrays
--
+- When you create an array using an array literal, it is initialized with the specified values as its elements, and its length is set to the number of arguments specified.
+- Arrays in JavaScript are more like lists; they can contain values of various types:
+`var myArray = ['string', 5, null];`
+- As objects, arrays are evaluated by reference, so you will need to deeply compare the array, or use the `JSON.stringify()` hack.
+
+Note: You'll likely look up how to declare a new array every time you need to.
+
+---
+
+### JavaScript syntax and basics: Other Object Types
+- RegExp and Date
+    - Regular Expressions find character patterns in strings based on rules..
+    - Date objects are based on a time value that is the number of milliseconds since 1 January, 1970 UTC.
+- `null` and `undefined`
+    - Though they differ slightly, `null` and `undefined` signify non-existent objects
+    - `undefined` is not a type of function
+    - Both coerce to `false`.
+
+---
+
+### JavaScript syntax and basics: Control Structures
+- `if` `else if`, `else`, `switch`
+- All types can be coerced to a boolean value.
+- For example: `''`, `null`, `0`, `undefined`, and `NaN` coerce to `false`
+- All other values coerce to `true` (including `[]` and `{}`)
+- So:
+```
+if([]) {
+    console.log('This will execute!');
+}
+else if ('') {
+    console..lg('This won\'t!');
+}
+```
+
+Note: We talked about type coercion, and here is a common usecase.
 
 ----
 
-- Like objects, arrays are evaluated by reference, so you will need to deeply compare the array, or use the `JSON.stringify()` hack.
+### Try/Catch
+- `try`/`catch` blocks exist in JavaScript
+- Likewise, it is possible to `throw` expressions
+- But none are used often
+- Promises allow for the control of asynchronous operations, but we won't visit until later.
+
+```
+try {
+    throw new Error('Error!');
+} catch (e) {
+    console.log(e); // Error!
+}
+```
 
 ---
 
-### JavaScript syntax and basics: Object Types: Date
--
+### JavaScript syntax and basics: Loops
+- JavaScript supports `do`, `while`, `for`, `for...in`, and `for...of`, and more
 
----
 
-### JavaScript syntax and basics: Object Types: RegExp
--
 
----
+```
+for (var i = 0; i < 10; i ++) {
+    console.log(i);
+}
+```
 
-### JavaScript syntax and basics: Non-Object Types: null and undefined
-- Though they differ slightly, `null` and `undefined` signify non-existent objects
-- `undefined` is not a type of function
-
----
-
-### JavaScript syntax and basics: Loops and Control Structures
+- The initializing expression is executed. This expression usually initializes one or more loop counters, but the syntax allows an expression of any degree of complexity. This expression can also declare variables.
+- The condition expression is evaluated. If the value of condition is true, the loop statements execute, else the for loop terminates. If the condition expression is omitted entirely, the condition is assumed to be true.
+- The update expression, if there is one, executes, and control returns to step 2.
+- There is no loop scoping in ES5, but we'll examing how that's changed.
 
 ---
 
@@ -235,6 +334,9 @@ Note: For Chrome, you can open up your browser with ctrl + shift + j, with Firef
 - [Codecademy][4]: https://www.codecademy.com/en/tracks/javascript "Codecademy"
 - [w3schools][5]: http://www.w3schools.com/js/default.asp "w3schools"
 - [JavaScript Garden][6]: http://bonsaiden.github.io/JavaScript-Garden/ "JavaScript Garden"
+
+----
+
 - [Effective JavaScript][7]: http://effectivejs.com/ "Effective JavaScript"
 - [Eloquent JavaScript][8]: http://eloquentjavascript.net/ "Eloquent JavaScript"
 - [JavaScript: the Good Parts][9]: http://www.maritimejournal.com/__data/assets/pdf_file/0020/1033940/Javascript-The-Good-Parts.pdf "JavaScript: the Good Parts"
