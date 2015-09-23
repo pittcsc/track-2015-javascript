@@ -1,26 +1,13 @@
-# Beginner Javascript 2
+# Beginner Javascript 1
 
-## Outline
+The second installment of a beginner's introduction to JavaScript: JavaScript in the browser.
 
-### The DOM
+## Outline:
+- The browser DOM
 - HTML
-- HTML tags
 - CSS
-- CSS selectors
+- JavaScript DOM interactions and jQuery
+- Client-side XMLHTTP requests (xhr)
 
-### DOM interaction
-- The window object
-- The document object
-- Query selectors
-
-### jQuery
-- Provides simplicity
-- Provides community
-- Provides legacy browser support
-- Provides AJAX
-
-### Client-side HTTP requests
-- Why?
-- XMLHTTPRequest
-- AJAX
-- CORS
+### References:
+- [CSS Specificity](https://css-tricks.com/specifics-on-css-specificity/)
