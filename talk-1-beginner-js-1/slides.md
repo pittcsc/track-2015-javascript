@@ -192,6 +192,12 @@ Note: So, again, there are no explicit types in JavaScript, only implicit ones. 
 - Strings come with built-in methods, such as `.toUpperCase()` and `.toLowerCase()`, `.charAt()`, and properties, including `.length`
 - Example:  `var message = "hello".length; //message = 5`
 
+----
+
+- Multi-line strings may be separated with `\`
+- Strings may be compared with the `<` and `>` operators
+- Strings in JavaScript are immutable
+
 ---
 
 ### JavaScript syntax and basics: Types: Booleans
