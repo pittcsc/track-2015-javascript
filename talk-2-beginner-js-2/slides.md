@@ -2,12 +2,25 @@
 
 ---
 
-## Outline
-- The browser DOM
-- HTML
-- CSS
-- JavaScript DOM interactions and jQuery
-- Client-side XMLHTTP requests (xhr)
+### Table of Contents
+---
+
+1. The DOM
+2. XML
+3. SVG
+4. HTML
+5. Tags
+6. What the DOM does to your HTML
+7. Cascading Stylesheets
+8. IDs and Classes
+9. IDs
+10. Classes
+11. JavaScript DOM Interaction
+12. Query Selectors
+13. jQuery
+14. AJAX
+15. HTTP
+16. XHR
 
 ---
 
@@ -19,7 +32,7 @@
 
 ### What is it?
 
-- Just a **convention** which standardizes how documents are meant to be represented and interacted with
+- Just a **conventional representation** of your document created by the browser 
 
 - Convention extends to HTML, XML, and by extension SVG (in XML format)
 
@@ -33,7 +46,7 @@
 
 - Less favorable than JSON because of its verbosity
 
-[Example]
+[Example: Image]
 
 ---
 
@@ -45,7 +58,7 @@
 
 - Renders graphics based on vector quantities that don't lose quality when resized
 
-[Example]
+[Example: Image]
 
 ---
 
@@ -69,7 +82,9 @@
 
 - Parsed into the DOM and are stored internally
 
-[Example]
+- Can hold attributes
+
+[Example: Image]
 
 ---
 
@@ -81,8 +96,7 @@
 
 - Cleans up and standardizes the 'tag soup' to provide a valid model
 
-[Live Coding! (Differences between document and internal representation)]
-https://css-tricks.com/dom/
+[Example: Show how the browser changes submitted html]
 
 ---
 
@@ -93,70 +107,110 @@ https://css-tricks.com/dom/
 ---
 
 - Defines presentation of a document, how it will be rendered
+
 - Looks at and acts on element references throughout the dom
 
-[Live Coding! (Basic styling!)]
-
 - How to specify which element? CSS can look at it's element name or...
+
+[Example: Style a div]
 
 ---
 
 ### IDs and Classes
 
 - ... it's attributes!
-- Within the dom elements carry around attribues which distinguish each other or carry data
+
+- Within the dom elements carry around attributes which distinguish each other or carry data
+
 - They can be selected for!
 
 ---
 
-### IDs and Classes (2)
+### IDs
 
 - **ID** "id" attribute in HTML elements
+
 - written with a # in style sheets
+
 - represent a single, specific instance of an element with a special role or job
+
 - convention dictates **there can only be one!**
-- **Classes** "class" attribute in HTML elements
-- represents a category of elements with certain jobs
-- you can make plenty of these!
 
-[Live Coding! (More styling!)]
-
-* show examples of what to use id's and classes for
 ---
 
-### JavaScript DOM interaction
+### Classes
 
-* emphasize the DOM's representation of the document
-* organized as a tree of nodes
-* where nodes can be anything, elements, attributes, hrefs, blah
+- **Classes** "class" attribute in HTML elements
 
-- The window object
-	- Reference to the window itself!
-	- Can be used to edit the very boundaries of space! (on a 2D plane)
-- The document object
-	- A reference to the document loaded into the browser
-	- This is where the majority of interactivity happens
+- represents a category of elements with certain jobs
+
+- you can make plenty of these!
+
+[Example: Make some ID's & Classes]
+
+---
+
+### JavaScript DOM Interaction
+
+[Example: The DOM Tree]
+
+---
+
+### The 'window' object
+
+- Reference to the window itself!
+
+---
+
+### The 'document' object
+
+- A reference to the document loaded into the browser
+
+- This is where the majority of interactivity happens
+
+---
+
+### JavaScript DOM Interaction
+
 - Both of these references and the majority of their methods provided by the DOM!
 
 - When JavaScript creates an execution context, it creates a reference to a global object
+
+---
+
+### JavaScript DOM Interaction
+
 - Within browsers, that ends up being window, but that doesn't always have to be the case!
+
 - When JavaScript is run outside of the browser (for example in node) something else is used in that environment
 
 ---
 
-### Query selectors
+### Query Selectors
+
+document.querySelector(".cssSelector");
+
 - An example of a method provided by the DOM
-- performs the fundamental task of returning a reference to an HTML element
-- can be assigned to local references in javascript using the 'var' keyword
 
-[Hot hot live coding!]
-**Show how the engine still returns object references in the console even with a blank javascript file
+- Performs a fundamental task of returning a reference to an HTML element
 
-**Show how to select and manipulate a DOM element through it's reference
+- Can be assigned to local references in javascript using the 'var' keyword
+
+[Example: Query Manipulation]
 
 ---
 
 ### jQuery
+
+---
+
+### What is it?
+
+- A lightweight JavaScript library
+
+- Simplifies alot of the common use-cases of JavaScript
+
+- Very extensible, has been designed to work across all major browsers
 
 ---
 
@@ -194,14 +248,37 @@ https://css-tricks.com/dom/
 
 ---
 
-### Client-side HTTP requests
+### What is it?
+
+- **Protocol** Agreed upon format for data exhange between two parties
+
+- Determines how data is transmitted and how servers and browsers are meant to handle it
+
+- Involves a series of request and response actions
+
+##### Example
+
+GET /foo.htm HTTP/1.1     (This is the Client Request-Line)
+
+HTTP/1.1 200 OK           (This is Server Status-Line)
 
 ---
 
+### XHR
+---
 ### XMLHTTPRequest
 
+---
 
-- CORS
+### What is it?
+
+- A JavaScript object that provides a way to retrieve piece of a data
+
+- Can be used to retrieve any type of data, not just XML
+
+- It allows for you to update just a part of your page without doing a full refresh
+
+- Involved heavily in AJAX programming
 
 ---
 
