@@ -47,8 +47,6 @@
 
 - Can hold attributes
 
-<div> stuff </div>
-
 ---
 
 ### The DOM
@@ -65,9 +63,9 @@
 
 ---
 
-### What the browser does with your documents
+### What the browser does with your HTML
 
-- How your document is represented and interacted with is based on the DOM, not the original document!
+- How your document is represted and interacted with is based on the DOM, not the original document!
 
 - This parsing process implemented because people are bad at coding
 
@@ -109,9 +107,7 @@
 
 - Defines presentation of a document, how it will be rendered
 
-- Looks at and acts on element references throughout the DOM
-
-<link href="stylesheet.css" rel="stylesheet"  type="text/css">
+- Looks at and acts on element references throughout the dom
 
 - How to specify which element? CSS can look at it's element name or...
 
@@ -121,7 +117,7 @@
 
 - ... it's attributes!
 
-- Within the DOM elements carry around attributes which distinguish each other or carry data
+- Within the dom elements carry around attributes which distinguish each other or carry data
 
 - They can be selected for!
 
@@ -131,7 +127,7 @@
 
 - **ID** "id" attribute in HTML elements
 
-- selected with a '#' in CSS
+- written with a # in style sheets
 
 - represent a single, specific instance of an element with a special role or job
 
@@ -142,8 +138,6 @@
 ### Classes
 
 - **Classes** "class" attribute in HTML elements
-
-- selected with a '.' in CSS
 
 - represents a category of elements with certain jobs
 
@@ -187,14 +181,13 @@
 
 ### Query Selectors
 
+document.querySelector(".cssSelector");
+
 - An example of a method provided by the DOM
 
 - Performs a fundamental task of returning a reference to an HTML element
 
-- Can be assigned to local references in JavaScript using the 'var' keyword
-
-var targetElement = document.querySelector("selector");
-targetElement.innerHTML = "I EXIST.";
+- Can be assigned to local references in javascript using the 'var' keyword
 
 ---
 
@@ -206,13 +199,9 @@ targetElement.innerHTML = "I EXIST.";
 
 - A lightweight JavaScript library
 
-- Simplifies a lot of the common use-cases of JavaScript
+- Simplifies alot of the common use-cases of JavaScript
 
 - Very extensible, has been designed to work across all major browsers
-
-- $("selector").text("I STILL EXIST.")
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 ---
 
@@ -236,9 +225,9 @@ targetElement.innerHTML = "I EXIST.";
 
 ### Why is it 'asynchronous'?
 
-- Client and server run independently of each other.
+- Client and server run independantly of each other.
 
-- The browser doesn't freeze until response is received from the server.
+- The browser doesn't freeze until response is recieved from the server.
 
 - Following a call, control is returned immediately to you as the user.
 
@@ -254,7 +243,7 @@ targetElement.innerHTML = "I EXIST.";
 
 ### What is it?
 
-- **Protocol** Agreed upon format for data exchange between two parties
+- **Protocol** Agreed upon format for data exhange between two parties
 
 - Determines how data is transmitted and how servers and browsers are meant to handle it
 
@@ -292,14 +281,10 @@ HTTP/1.1 200 OK           (This is Server Status-Line)
 
 ---
 
-- Many servers place restrictions on where a domain can make requests (of the XML variety) from
+- Many servers place restrictions on where a domain can make requests from
 
 - A way to safely circumvent the same-origin policy
 
-- You can set HTTP headers which describe other domains from which requests are approved
+- 
 
----
-
-### Thank you!
-
----
+### Citations
