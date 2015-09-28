@@ -1,4 +1,4 @@
-# Beginner Javascript 1
+# Beginner Javascript 2
 
 The second installment of a beginner's introduction to JavaScript: JavaScript in the browser.
 
