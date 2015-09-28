@@ -1,4 +1,4 @@
-# Beginner Javascript 2
+# Beginner JavaScript 2
 
 ---
 
@@ -8,13 +8,8 @@
 1. HTML
 2. Tags
 3. The DOM
-4. XML
-5. SVG
-6. What the DOM does to your HTML
-7. Cascading Stylesheets
+4. CSS
 8. IDs and Classes
-9. IDs
-10. Classes
 11. JavaScript DOM Interaction
 12. Query Selectors
 13. jQuery
@@ -47,6 +42,8 @@
 
 - Can hold attributes
 
+		<div attr="dandy"> foo </div>
+
 ---
 
 ### The DOM
@@ -63,15 +60,19 @@
 
 ---
 
-### What the browser does with your HTML
+### What the browser does with your documents
 
-- How your document is represted and interacted with is based on the DOM, not the original document!
+- How your document is represented and interacted with is based on the DOM, not the original document!
 
 - This parsing process implemented because people are bad at coding
 
 - Cleans up and standardizes the 'tag soup' to provide a valid model
 
-[DOM Tree](http://www.w3schools.com/js/pic_htmltree.gif)
+---
+
+### The DOM Tree
+
+![DOM Tree](http://www.w3schools.com/js/pic_htmltree.gif)
 
 ---
 
@@ -107,19 +108,33 @@
 
 - Defines presentation of a document, how it will be rendered
 
-- Looks at and acts on element references throughout the dom
+- Looks at and acts on element references throughout the DOM
 
-- How to specify which element? CSS can look at it's element name or...
+- How to specify which element? CSS can look at it's element name...
+
+---
+
+### Select by element name
+
+	div {
+
+		border: 5px dashed blue;
+		color: red;
+
+	}
 
 ---
 
 ### IDs and Classes
 
-- ... it's attributes!
+- Or with it's attributes!
 
-- Within the dom elements carry around attributes which distinguish each other or carry data
+- Within the DOM elements carry around attributes which distinguish each other or carry data
 
 - They can be selected for!
+
+		<div id="someId"> I live in an ID! </div>
+		<div class="someClass"> I live in a class! </div>
 
 ---
 
@@ -127,11 +142,11 @@
 
 - **ID** "id" attribute in HTML elements
 
-- written with a # in style sheets
+- selected with a '#' in CSS
 
 - represent a single, specific instance of an element with a special role or job
 
-- convention dictates **there can only be one!**
+- convention dictates **there can only be one!** 
 
 ---
 
@@ -139,9 +154,23 @@
 
 - **Classes** "class" attribute in HTML elements
 
+- selected with a '.' in CSS
+
 - represents a category of elements with certain jobs
 
 - you can make plenty of these!
+
+---
+
+### IDs and Classes
+
+	#id {
+
+	}
+
+	.class {
+
+	}
 
 ---
 
@@ -154,12 +183,9 @@
 - Reference to the window itself!
 
 ---
-
 ### The 'document' object
 
 - A reference to the document loaded into the browser
-
-- This is where the majority of interactivity happens
 
 ---
 
@@ -168,6 +194,8 @@
 - Both of these references and the majority of their methods provided by the DOM!
 
 - When JavaScript creates an execution context, it creates a reference to a global object
+
+- Attaches global variables to this object
 
 ---
 
@@ -181,13 +209,15 @@
 
 ### Query Selectors
 
-document.querySelector(".cssSelector");
-
 - An example of a method provided by the DOM
 
 - Performs a fundamental task of returning a reference to an HTML element
 
-- Can be assigned to local references in javascript using the 'var' keyword
+- Can be assigned to local references in JavaScript using the 'var' keyword
+
+		var targetElement = document.querySelector("selector");
+
+		targetElement.innerHTML = "I EXIST.";
 
 ---
 
@@ -199,9 +229,11 @@ document.querySelector(".cssSelector");
 
 - A lightweight JavaScript library
 
-- Simplifies alot of the common use-cases of JavaScript
+- Simplifies a lot of the common use-cases of JavaScript
 
 - Very extensible, has been designed to work across all major browsers
+
+		$("selector").text("I STILL EXIST.")
 
 ---
 
@@ -225,9 +257,9 @@ document.querySelector(".cssSelector");
 
 ### Why is it 'asynchronous'?
 
-- Client and server run independantly of each other.
+- Client and server run independently of each other.
 
-- The browser doesn't freeze until response is recieved from the server.
+- The browser doesn't freeze until response is received from the server.
 
 - Following a call, control is returned immediately to you as the user.
 
@@ -243,17 +275,15 @@ document.querySelector(".cssSelector");
 
 ### What is it?
 
-- **Protocol** Agreed upon format for data exhange between two parties
+- **Protocol** Agreed upon format for data exchange between two parties
 
 - Determines how data is transmitted and how servers and browsers are meant to handle it
 
 - Involves a series of request and response actions
 
-##### Example
+		GET /foo.html HTTP/1.1     (This is the Client Request-Line)
 
-GET /foo.html HTTP/1.1     (This is the Client Request-Line)
-
-HTTP/1.1 200 OK           (This is Server Status-Line)
+		HTTP/1.1 200 OK            (This is Server Status-Line)
 
 ---
 
@@ -273,6 +303,10 @@ HTTP/1.1 200 OK           (This is Server Status-Line)
 
 - Involved heavily in AJAX programming
 
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.open("GET", url, true);
+		xmlhttp.send();
+
 ---
 
 ### CORS
@@ -281,10 +315,14 @@ HTTP/1.1 200 OK           (This is Server Status-Line)
 
 ---
 
-- Many servers place restrictions on where a domain can make requests from
+- Many servers place restrictions on where a domain can make requests (of the XML variety) from
 
 - A way to safely circumvent the same-origin policy
 
-- 
+- You can set HTTP headers which describe other domains from which requests are approved
 
-### Citations
+---
+
+### Thank you!
+
+---

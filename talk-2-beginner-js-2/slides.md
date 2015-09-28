@@ -8,15 +8,9 @@
 1. HTML
 2. Tags
 3. The DOM
-4. XML
-5. SVG
-6. What the DOM does to your HTML
-7. Cascading Stylesheets
+4. CSS
 8. IDs and Classes
-9. IDs
-10. Classes
 11. JavaScript DOM Interaction
-12. Query Selectors
 13. jQuery
 14. AJAX
 15. HTTP
@@ -47,6 +41,8 @@
 
 - Can hold attributes
 
+		<div attr="dandy"> foo </div>
+
 ---
 
 ### The DOM
@@ -71,7 +67,11 @@
 
 - Cleans up and standardizes the 'tag soup' to provide a valid model
 
-[DOM Tree](http://www.w3schools.com/js/pic_htmltree.gif)
+---
+
+### The DOM Tree
+
+![DOM Tree](http://www.w3schools.com/js/pic_htmltree.gif)
 
 ---
 
@@ -109,17 +109,31 @@
 
 - Looks at and acts on element references throughout the DOM
 
-- How to specify which element? CSS can look at it's element name or...
+- How to specify which element? CSS can look at it's element name...
+
+---
+
+### Select by element name
+
+	div {
+
+		border: 5px dashed blue;
+		color: red;
+
+	}
 
 ---
 
 ### IDs and Classes
 
-- ... it's attributes!
+- Or with it's attributes!
 
 - Within the DOM elements carry around attributes which distinguish each other or carry data
 
 - They can be selected for!
+
+		<div id="someId"> I live in an ID! </div>
+		<div class="someClass"> I live in a class! </div>
 
 ---
 
@@ -131,7 +145,7 @@
 
 - represent a single, specific instance of an element with a special role or job
 
-- convention dictates **there can only be one!**
+- convention dictates **there can only be one!** 
 
 ---
 
@@ -147,6 +161,18 @@
 
 ---
 
+### IDs and Classes
+
+	#id {
+
+	}
+
+	.class {
+
+	}
+
+---
+
 ### JavaScript DOM Interaction
 
 ---
@@ -156,12 +182,9 @@
 - Reference to the window itself!
 
 ---
-
 ### The 'document' object
 
 - A reference to the document loaded into the browser
-
-- This is where the majority of interactivity happens
 
 ---
 
@@ -191,8 +214,9 @@
 
 - Can be assigned to local references in JavaScript using the 'var' keyword
 
-var targetElement = document.querySelector("selector");
-targetElement.innerHTML = "I EXIST.";
+		var targetElement = document.querySelector("selector");
+
+		targetElement.innerHTML = "I EXIST.";
 
 ---
 
@@ -208,7 +232,7 @@ targetElement.innerHTML = "I EXIST.";
 
 - Very extensible, has been designed to work across all major browsers
 
-- $("selector").text("I STILL EXIST.")
+		$("selector").text("I STILL EXIST.")
 
 ---
 
@@ -256,11 +280,9 @@ targetElement.innerHTML = "I EXIST.";
 
 - Involves a series of request and response actions
 
-##### Example
+		GET /foo.html HTTP/1.1     (This is the Client Request-Line)
 
-GET /foo.html HTTP/1.1     (This is the Client Request-Line)
-
-HTTP/1.1 200 OK           (This is Server Status-Line)
+		HTTP/1.1 200 OK            (This is Server Status-Line)
 
 ---
 
@@ -279,6 +301,10 @@ HTTP/1.1 200 OK           (This is Server Status-Line)
 - It allows for you to update just a part of your page without doing a full refresh
 
 - Involved heavily in AJAX programming
+
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.open("GET", url, true);
+		xmlhttp.send();
 
 ---
 
