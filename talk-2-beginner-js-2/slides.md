@@ -1,4 +1,4 @@
-# Beginner Javascript 2
+# Beginner JavaScript 2
 
 ---
 
@@ -46,8 +46,6 @@
 - Parsed into the DOM and are stored internally
 
 - Can hold attributes
-
-<div> stuff </div>
 
 ---
 
@@ -111,8 +109,6 @@
 
 - Looks at and acts on element references throughout the DOM
 
-<link href="stylesheet.css" rel="stylesheet"  type="text/css">
-
 - How to specify which element? CSS can look at it's element name or...
 
 ---
@@ -175,6 +171,8 @@
 
 - When JavaScript creates an execution context, it creates a reference to a global object
 
+- Attaches global variables to this object
+
 ---
 
 ### JavaScript DOM Interaction
@@ -211,8 +209,6 @@ targetElement.innerHTML = "I EXIST.";
 - Very extensible, has been designed to work across all major browsers
 
 - $("selector").text("I STILL EXIST.")
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 ---
 
