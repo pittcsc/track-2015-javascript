@@ -2,19 +2,23 @@
 
 ## Outline
 
-### Coffeescript
+## Coffeescript
 
-### ES6
+## ES6
 - Strict mode
 - Variables: var versus let and const
 - Object.assign()
 - Psuedo-Object Orientation
-- Promises
+- Async/Await and Promises
 - String templating
 - Destructuring assignment
 - Imports
+- Fat Arrows
 
-### Typescript
+## Typescript
 - Types
 
-### ES7
+## ClosureScript
+
+## ES7
+
