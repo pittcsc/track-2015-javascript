@@ -283,8 +283,6 @@ Note: Though slightly, pedantic, it's important to understand that JavaScript su
 - You can also assign a name and store the value in a function:
 `var myFunct = function functName() {};`
 - This will define a reference to the function name within it's own body, but not outside it!
-- The former won't be hoisted with the variable definition.
-- The latter will.
 
 Note: Something something horse with no name. In the former example, we could lose access to that annonymous function if the variable was reassigned. In the latter, the function name is available only within the function. We can also assign names to lambdas in the literal definition, while passing as a parameter.
 
