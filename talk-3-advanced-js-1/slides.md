@@ -89,15 +89,35 @@ Note: In this example, the hoistedVar1 is assigned seemingly before it is define
 
 ## Scope
 - Scope is simply all the variables available at any instace.
-- Block statements (loops, conditionals, error handling) do not introduce a scope. 
-- Variables introduced within a block are scoped to the containing function or script
+- Block statements (loops, conditionals, error handling) do not introduce a scope.
+- Variables introduced within a block are scoped to the containing function or script.
+- Each time you attempt to access a variable within a function’s execution context, it will try its own variable object.
+- If the identifier is not found in the variable object, it will climb up the scope chain examining every execution context.
 
-Note: As seen in our original problem, this can be tricky.
+Note: As seen in our original problem, this can be tricky. A variable can be defined in either local or global scope, which establishes the variables’ accessibility from different scopes during runtime. Any defined global variable, meaning any variable declared outside of a function body will live throughout runtime and can be accessed and altered in any scope
+
+----
+
+## Scope v. Context
+- Every function invocation has both a scope and a context associated with it.
+- Scope is function-based while context is object-based.
+- Scope pertains to the variable access of a function when it is invoked and is unique to each invocation.
+- Context is always the value of the `this` keyword which is a reference to the object that “owns” the currently executing code.
+
+Note: In other words, scope is function-based, while context is object-based. The context also contains all the variables in the current scope, as they belong to the scoped object. 
+
+----
+
+## The Execution Stack and Scope Chain
+- An execution context has a creation phase: the interpreter will first create a variable object (or activation object) of all the variables in the execution context.
+- Then the corresponding scope chain is initialized, and the value of `this` is determined last.
+- Finally, in the execution phase, code is interpreted and executed.
+
+Note: JavaScript is a single threaded language, meaning only one task can be executed at a time. When the JavaScript interpreter initially executes code, it first enters into a global execution context by default. Each invocation of a function from this point on will result in the creation of a new execution context. Execution context is more scope than context, dispite the name. Each time a new execution context is created it is appended to the top of the execution stack. Once the top context is copleted, control will return to the execution context below.
 
 ---
 
 ## `this`
-- All objects and functions have certain properties when created, including `this`.
 - In function scopes, `this` is a variable with the value of the object that invokes the function.
 - So if the function is called from the global context, `this` would refer to the global context.
 - If it's called as an object method, `this` refers to that object.
