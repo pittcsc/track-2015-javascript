@@ -2,9 +2,17 @@
 
 ---
 
-## Why?
+## Intro to the client
 
 ---
+
+## Single-page Applications
+
+----
+
+## Why?
+
+----
 
 ## Limitations
 
@@ -23,6 +31,12 @@
 ---
 
 ## Ember
+
+---
+
+## Upcoming Workshops:
+- Angular: Tuesday, October 27, 2015
+- Ember: Thursday November 12, 2015
 
 ---
 
