@@ -1,37 +1,18 @@
 # Functional Programming in Javascript
 
+An introduction to functional programming in JavaScript
+
 ## Outline
-
-### What is Functional Programming?
-
-### Where is Functional Programming useful?
-- Especially in UI manipulation.
-- In prohibition-themed bars, functional programming can be used to impress equally hipster programmers while twirling your handlebar mustache and drinking from mason jars.
-
-### But why JavaScript
-- JavaScript is actually a highly functional language.
-- For example: First-class functions, closures, currying, weak object orientation.
-- Still, it's not a perfect vehicle for functional Programming. And it doesn't need to be: we can benefit from the broad strokes of functional programming while maintaining the exporessiveness of JavaScript.
-
-### Functional programming concepts: Immutability
-- Creating a new object with `Object.assign({}, ...)` or copying arrays with `[].concat()`, rather than mutating the original object. 
-
-### Higher Order functions and Closures
-- Any function that utilizes another function is called a higher-order function.
-- The inner function is called a closure.
-- `.map()` and `.reduce()`
-
-### Currying
--
-
-### Functional Programming in other languages
-- Scala and Haskell are heralded as true functional languages.
-- ClojureScript is a compile-to-JavaScript implementation of the functional language, Clojure.
+- Introduction to functional programming
+- First-order functions
+- Lambdas and Annonymous Functions
+- Closures
+- Currying
+- Purity/Immutability
+- Arrays Manipulation (map, reduce, etc.)
 
 ### References:
-- [Mostly Adequate Guide to Functional Programming][1]
-- [Functional Programming in JavaScript: Map, Filter, and Reduce][2]
-- [ClojureScript][3]
-[1]: https://github.com/DrBoolean/mostly-adequate-guide "Mostly Adequate Guide to Functional Programming"
-[2]: http://cryto.net/~joepie91/blog/2015/05/04/functional-programming-in-javascript-map-filter-reduce/ "Functional Programming in JavaScript: Map, Filter, and Reduce"
-[3]: https://github.com/magomimmo/modern-cljs "ClojureScript"
+- [Mostly Adequate Guide to Functional Programming](https://github.com/DrBoolean/mostly-adequate-guide)
+- [Functional Programming in JavaScript: Map, Filter, and Reduce](http://cryto.net/~joepie91/blog/2015/05/04/functional-programming-in-javascript-map-filter-reduce/)
+- [Eloquent JavaScript: Functional Programming](http://eloquentjavascript.net/1st_edition/chapter6.html)
+- [ClojureScript](https://github.com/magomimmo/modern-cljs)
