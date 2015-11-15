@@ -31,7 +31,7 @@ Note: Could you create a web server using just Node? Yes. No point, it will requ
 ## Server-Client Interaction
 - Client sends some request to server
 - Server receives request and sends back a response
-- Brower is an application that allows us to send a request to a server
+- Browser is an application that allows us to send a request to a server
 - An Express/Node server must be able to accept these requests and send a response
 - "http://my.pitt.edu.com"
 ![Client/Server](/http-diagram.jpg?raw=true)
@@ -69,7 +69,7 @@ In the second example we are passing a callback function which will perform some
 ---
 ## npm
 - Stands for Node Package Manager
-- Comes packaged with Node
+- Comes packaged with Node Version Manager (NVM)
 - Online repository for publishing of open-source NodeJs projects/modules
 - Command-line utility for interacting with that repository and aids in package installtion/version management/dependency management
 
@@ -163,4 +163,4 @@ Note: Simply offer easy ways to interact with MongoDB
 - Seneca- not a web framework, but instead offers microservices for Node
 Note: Firebase pretty much does everything for you, has an api that lets you store/sync data across multiple clients
 Meteor is a newer alternative to express, also a web framework does some things a little differently
-Seneca- kind of stringe, provides plugins that look after the foundations of your app, is able to takes care of the structure of your code, not very beginner friendly
+Seneca- kind of strange, provides plugins that look after the foundations of your app, is able to takes care of the structure of your code, not very beginner friendly
