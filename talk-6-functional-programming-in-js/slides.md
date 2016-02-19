@@ -35,7 +35,7 @@
 - For example: First-class functions, closures, currying, weak object orientation.
 - Still, it's not a perfect vehicle for functional Programming.
 
-Note: And it doesn't need to be: we can benefit from the broad strokes of functional programming while maintaining the exporessiveness of JavaScript.
+Note: And it doesn't need to be: we can benefit from the broad strokes of functional programming while maintaining the expressiveness of JavaScript.
 
 ---
 
@@ -64,14 +64,14 @@ Note: Though slightly, pedantic, it's important to understand that JavaScript su
 - Closures store references, not value!
 
 ```
-function fullName(){
+function fullName(surname){
     var firstName = "Rick";
 
     function innerFunct(lastName){
         var greet = 'Welcome: ';
         console.log(greet + firstName + ' ' + lastName);
     };
-    return innerFunct();
+    return innerFunct(surname);
 };
 
 fullName("Sanchez"); //Welcome: Rick Sanchez
